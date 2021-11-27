@@ -7,7 +7,7 @@ import (
 )
 
 /*
- * ## Data Packet
+ * ## Acknowledgment Packet
  * 		2byte      2byte
  *    ------------------------
  *   | OpCode   |  Block #   |
