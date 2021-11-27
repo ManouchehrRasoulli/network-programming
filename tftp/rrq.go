@@ -98,6 +98,6 @@ func (r *ReadRequest) UnmarshalBinary(b []byte) error {
 	if actual != "octet" {
 		return errors.New("only binary transfer supported")
 	}
-	
+
 	return nil
 }

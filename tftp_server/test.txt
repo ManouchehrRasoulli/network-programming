@@ -1,0 +1,1 @@
+This file is a test file which server will serve to clients who requesting data.
