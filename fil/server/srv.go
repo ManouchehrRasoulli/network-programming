@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"context"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net"
@@ -61,9 +60,9 @@ func (s *Server) serve(con net.Conn) {
 	}
 
 	d := proto.RReq{}
-	if err := d.UnmarshalBinary(req); err != nil {
+	if err = d.UnmarshalBinary(req); err != nil {
 		s.Logger.Printf("server :: got error %s on connection %v\n", err, con.RemoteAddr())
 	}
 
-	fmt.Printf("%v\n", d)
+	s.Logger.Printf("server :: %v\n", d)
 }
