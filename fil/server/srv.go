@@ -60,8 +60,6 @@ func (s *Server) serve(con net.Conn) {
 		s.Logger.Printf("server :: got error %s on connection %v\n", err, con.RemoteAddr())
 	}
 
-	fmt.Println(req, len(req))
-
 	d := proto.RReq{}
 	if err := d.UnmarshalBinary(req); err != nil {
 		s.Logger.Printf("server :: got error %s on connection %v\n", err, con.RemoteAddr())

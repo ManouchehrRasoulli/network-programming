@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net"
 	"network-programming/fil/proto"
@@ -36,8 +35,6 @@ func (c *Client) Download(path string) error {
 	if err != nil {
 		return err
 	}
-
-	fmt.Println(bin)
 
 	if n != len(bin) {
 		panic("invalid write.")
